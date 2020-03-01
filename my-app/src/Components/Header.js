@@ -1,5 +1,7 @@
 import React from 'react';
 import '../App.css';
+import { NavLink } from 'react-router-dom';
+import $ from 'jquery'
 
 const Header = props => {
   return (
@@ -12,8 +14,13 @@ const Header = props => {
         </div>
 
         <div className="header__right">
-          <a className="reg__btn" href="#">Register</a>
-          <a className="login__btn" href="#">Login</a>
+        <NavLink className="reg__btn" to="Register">Register</NavLink>
+        <NavLink className="login__btn" to="Login">Login</NavLink>
+        </div>
+
+        <div id="mobile__nav">
+          <div className="nav__item"></div>
+          <div className="nav__item"></div>
         </div>
       </header>
       
@@ -53,7 +60,7 @@ const Header = props => {
             </div>
           </div>
           </div>
-          <img className="grad__line header__line" src="./img/gradient-line.png"></img> 
+          <img className="grad__line header__line" src="/img/gradient-line.png"></img> 
           </div>
     </section>
   );
